@@ -8,7 +8,7 @@ function Greeting() {
   return (
     <React.Fragment>
       <Header />
-      <section className="container-fluid" dir="rtl">
+      {/* <section className="container-fluid" dir="rtl">
         <div className="row">
           <div className="col-3">
             <h5>Filters</h5>
@@ -25,7 +25,7 @@ function Greeting() {
             <Card img={"White.png"} title={"Esun PLA 1.75 White"} />
           </div>
         </div>
-      </section>
+      </section> */}
     </React.Fragment>
   );
 }

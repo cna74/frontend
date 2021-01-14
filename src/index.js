@@ -1,17 +1,43 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import Header from "./Header";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function Greeting() {
+  return (
+    <React.Fragment>
+      <Header />
+      <section className="container-fluid" dir="rtl">
+        <div className="row">
+          <div className="col-3">
+            <h5>Filters</h5>
+            <hr />
+            <h6 className="text-info">Brands</h6>
+            <h6 className="text-info">Type</h6>
+            <h6 className="text-info">Width</h6>
+            <h6 className="text-info">color</h6>
+          </div>
+          <div className="col-9 row">
+            <Card img={"Black.png"} title={"Hello"} />
+            <Card img={"Blue.png"} title={"Hello"} />
+            <Card img={"Red.png"} title={"Hello"} />
+            <Card img={"White.png"} title={"Esun PLA 1.75 White"} />
+          </div>
+        </div>
+      </section>
+    </React.Fragment>
+  );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Card = ({ img, title }) => {
+  return (
+    <article className="card col-sm-3 m-2">
+      <img className="card-img-top" src={img} alt="" />
+      <div className="card-body">
+        <p>{title}</p>
+      </div>
+    </article>
+  );
+};
+ReactDom.render(<Greeting />, document.getElementById("root"));

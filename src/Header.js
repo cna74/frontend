@@ -18,20 +18,11 @@ const Header = () => {
           </a>
         </div>
         <div className="col-12 col-sm-9 col-md-9 col-lg-9 d-flex justify-content-end align-items-center btn-head-holder">
-          <div className="search-part">
-            <form action="" autoComplete="off">
-            <button><Search className='search-part'/></button>
-              <input
-                id="search_text"
-                type="text"
-                name="s"
-                class="search-input"
-                placeholder="جستجو کنید ..."
-                autocomplete="off"
-              ></input>
+            <form action="" className='search-part' autoComplete="off">
+            <button><Search /></button>
+              <input id="search_text" type="text" name="s" placeholder="جستجو کنید ..." autocomplete="off"></input>
             </form>
-          </div>
-          {/* <span className="inner-btn">۰ تومان</span> */}
+            
         </div>
       </div>
     </div>

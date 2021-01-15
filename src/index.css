@@ -58,6 +58,8 @@ ul {
 li {
    float: left;
 }
-a.link{
-    margin-left: 5px;
+.bottom-nav{
+    float: left;
+    background: -moz-linear-gradient(left, blue, green);
+    opacity: 0.5;
 }
